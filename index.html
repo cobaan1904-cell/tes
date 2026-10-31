@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b18">
+  <meta name="description" content="RUANGDIGITAL190 — katalog aplikasi premium, layanan digital, dan top up Mobile Legends serta Free Fire. Lihat harga dan konfirmasi stok melalui WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RUANGDIGITAL190 — Premium Digital Store">
+  <meta property="og:description" content="Aplikasi premium dan top up game dalam satu tempat. Pilih produk, lihat harga, lalu konfirmasi stok melalui WhatsApp.">
+  <meta property="og:image" content="assets/brand/ruangdigital-logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RUANGDIGITAL190 — Premium Digital Store">
+  <meta name="twitter:description" content="Aplikasi premium dan top up game dalam satu tempat.">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <title>RUANGDIGITAL190 — Premium Digital Store</title>
+  <style>
+    :root{
+      --bg:#080b18;--bg2:#0c1022;--panel:#12172b;--panel2:#171e37;--panel3:#1c2542;
+      --ink:#f5f7ff;--muted:#a5aec7;--muted2:#7d89a8;--purple:#8b72ff;--cyan:#52e4df;
+      --pink:#ff5d91;--gold:#ffd17a;--green:#51dfa0;--red:#ff778d;--line:rgba(211,220,255,.12);
+      --shadow:0 26px 70px rgba(0,0,0,.38);--radius:24px;--max:1200px;
+    }
+    *{box-sizing:border-box}
+    [hidden]{display:none!important}
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{margin:0;color:var(--ink);font-family:"DM Sans",Arial,sans-serif;line-height:1.55;background:
+      radial-gradient(ellipse at 12% -10%,rgba(116,83,255,.22),transparent 36rem),
+      radial-gradient(ellipse at 95% 12%,rgba(32,205,205,.12),transparent 30rem),
+      linear-gradient(180deg,#080b18 0%,#0b0f20 52%,#080b18 100%);overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.14;background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 86%)}
+    body.modal-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}button{color:inherit}img{display:block;max-width:100%}
+    .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(8,11,24,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand-logo{width:76px;height:48px;object-fit:contain;object-position:center;background:#10162a;border:1px solid rgba(151,128,255,.22);border-radius:12px;padding:3px}
+    .brand-text{font:700 15px/1.1 "Space Grotesk",sans-serif;letter-spacing:.7px;white-space:nowrap}
+    .brand-sub{display:block;margin-top:5px;color:#8994b3;font-size:9px;letter-spacing:2.5px;font-weight:800}
+    .nav-links{display:flex;align-items:center;gap:23px;color:#c1c9dc;font-size:12px;font-weight:700}
+    .nav-links a{transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:11px 17px;border:1px solid transparent;border-radius:13px;font-size:12px;font-weight:800;cursor:pointer;transition:transform .2s,filter .2s,border-color .2s,background .2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn:focus-visible,.filter:focus-visible,.menu-toggle:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+    .btn-primary{color:#080b18;background:linear-gradient(110deg,var(--cyan),#80a5ff 58%,#b18bff);box-shadow:0 10px 28px rgba(95,150,255,.2)}
+    .btn-ghost{color:#f2f4ff;background:rgba(255,255,255,.045);border-color:var(--line)}.btn-wa{background:linear-gradient(110deg,#28d77b,#18b965);color:#062014}
+    .btn-sm{min-height:35px;padding:8px 11px;border-radius:10px;font-size:10px}.btn-block{width:100%}
+    .menu-toggle{display:none;width:43px;height:43px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.04);cursor:pointer;font-size:20px}
+    .hero{padding:67px 0 36px;position:relative}.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:46px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border-radius:999px;color:#b4f7f3;background:rgba(82,228,223,.08);border:1px solid rgba(82,228,223,.2);font-size:9px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}
+    .live-dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 13px var(--cyan);animation:pulse 1.8s infinite}
+    h1,h2,h3,h4,p{margin-top:0}.hero h1{max-width:690px;margin:20px 0 17px;font:700 clamp(42px,5.4vw,68px)/1.02 "Space Grotesk",sans-serif;letter-spacing:-3px}
+    .gradient-text{color:transparent;background:linear-gradient(100deg,#64e9df 0%,#8b9dff 48%,#ff83b4 100%);background-clip:text;-webkit-background-clip:text}
+    .hero-copy{max-width:590px;color:#b4bdd2;font-size:14px;line-height:1.8}.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:25px}
+    .hero-points{display:flex;flex-wrap:wrap;gap:16px;margin-top:23px;color:#a4afc9;font-size:10px;font-weight:700}.hero-points span{display:flex;align-items:center;gap:7px}.check{color:var(--cyan);font-size:14px}
+    .hero-stage{position:relative;min-height:420px;border:1px solid rgba(178,169,255,.18);border-radius:32px;overflow:hidden;isolation:isolate;background:
+      radial-gradient(circle at 50% 48%,rgba(113,96,255,.25),transparent 38%),radial-gradient(circle at 80% 20%,rgba(82,228,223,.15),transparent 30%),linear-gradient(145deg,#15182e,#0d1325 65%,#17122c);box-shadow:var(--shadow)}
+    .hero-stage::before,.hero-stage::after{content:"";position:absolute;z-index:-1;border:1px solid rgba(135,146,255,.22);border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%)}
+    .hero-stage::before{width:290px;height:290px;box-shadow:0 0 0 32px rgba(139,114,255,.045),0 0 0 68px rgba(139,114,255,.03);animation:orbit 22s linear infinite}
+    .hero-stage::after{width:390px;height:390px;border-style:dashed;opacity:.55;animation:orbit 35s linear infinite reverse}
+    .stage-core{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:180px;height:120px;border-radius:25px;display:grid;place-items:center;background:rgba(7,12,28,.72);border:1px solid rgba(130,221,255,.25);box-shadow:0 0 75px rgba(104,135,255,.36),inset 0 2px 3px rgba(255,255,255,.08);rotate:-5deg;padding:10px}
+    .stage-core img{width:100%;height:100%;object-fit:contain;border-radius:12px;rotate:5deg}
+    .stage-chip{position:absolute;display:flex;align-items:center;gap:10px;padding:11px 13px;border:1px solid rgba(225,230,255,.14);border-radius:15px;background:rgba(10,15,32,.82);backdrop-filter:blur(14px);box-shadow:0 12px 28px rgba(0,0,0,.24);animation:float 5s ease-in-out infinite}
+    .stage-chip img{width:31px;height:31px;object-fit:contain;border-radius:8px;background:#f8f9ff;padding:3px}.stage-chip strong{display:block;font:700 11px "Space Grotesk",sans-serif}.stage-chip small{display:block;margin-top:2px;color:#99a5c1;font-size:9px}
+    .chip-a{left:19px;top:24px}.chip-b{right:18px;top:116px;animation-delay:-1.4s}.chip-c{left:32px;bottom:25px;animation-delay:-2.6s}.chip-d{right:18px;bottom:28px;animation-delay:-3.5s}
+    .stage-label{position:absolute;top:23px;left:50%;transform:translateX(-50%);color:#b3bce0;font-size:8px;font-weight:800;letter-spacing:2px;white-space:nowrap}.stage-caption{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#a7b2ce;font-size:9px;letter-spacing:1.4px;white-space:nowrap}
+    .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px;padding:17px 20px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025)}
+    .trust-item{display:flex;align-items:center;gap:10px;color:#aeb9d2;font-size:10px;font-weight:700}.trust-icon{width:31px;height:31px;flex:0 0 31px;display:grid;place-items:center;border-radius:10px;color:var(--cyan);background:rgba(82,228,223,.09);font-size:15px}
+    .section{padding:46px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:23px}.kicker{color:var(--cyan);font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    .section-head h2{margin:7px 0 0;font:700 clamp(26px,3.7vw,39px)/1.1 "Space Grotesk",sans-serif;letter-spacing:-1.2px}.section-head p{max-width:610px;margin:9px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
+    .ticker-wrap{padding:15px 0 20px;overflow:hidden;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.018)}
+    .ticker-label{margin-bottom:12px;color:#8591b1;font-size:8px;font-weight:800;letter-spacing:2.2px;text-align:center}.ticker-window{overflow:hidden;mask-image:linear-gradient(90deg,transparent,black 5%,black 95%,transparent)}
+    .ticker-track{display:flex;width:max-content;gap:12px;animation:ticker 35s linear infinite}.ticker-window:hover .ticker-track,.ticker-window:focus-within .ticker-track{animation-play-state:paused}
+    .ticker-item{display:flex;align-items:center;gap:9px;min-width:155px;padding:10px 14px;border:1px solid var(--line);border-radius:14px;background:rgba(17,23,43,.82);cursor:pointer;transition:border-color .2s,transform .2s}
+    .ticker-item:hover{border-color:rgba(82,228,223,.4);transform:translateY(-2px)}.ticker-item img{width:29px;height:29px;padding:3px;object-fit:contain;border-radius:8px;background:#f8f9ff}.ticker-item.ticker-freefire img{width:52px;height:29px;padding:5px;background:#11131b}.ticker-item span{font-size:10px;font-weight:800;white-space:nowrap}
+    .catalog-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:20px}.search{flex:1 1 250px;display:flex;align-items:center;gap:10px;min-height:46px;padding:0 14px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.035);color:#aab6d0}
+    .search input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font-size:12px}.search input::placeholder{color:#75819f}.filters{display:flex;flex-wrap:wrap;gap:7px}
+    .filter{padding:10px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);color:#aeb9d1;font-size:10px;font-weight:800;cursor:pointer;transition:.2s}
+    .filter.active{color:#090d1a;border-color:transparent;background:linear-gradient(100deg,var(--cyan),#9b8bff)}
+    .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.product-card{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:21px;background:linear-gradient(155deg,rgba(21,27,51,.97),rgba(12,17,34,.98));box-shadow:0 12px 30px rgba(0,0,0,.15);transition:transform .24s,border-color .24s,box-shadow .24s}
+    .product-card:hover{transform:translateY(-5px);border-color:rgba(82,228,223,.34);box-shadow:0 20px 38px rgba(0,0,0,.26)}.product-top{min-height:116px;padding:17px;display:flex;align-items:center;gap:13px;background:radial-gradient(circle at 90% 10%,rgba(139,114,255,.16),transparent 45%),linear-gradient(135deg,rgba(82,228,223,.045),rgba(255,93,145,.045));border-bottom:1px solid rgba(255,255,255,.06)}
+    .product-logo{width:62px;height:62px;flex:0 0 62px;display:grid;place-items:center;padding:8px;border-radius:17px;background:#f8f9ff;box-shadow:0 9px 20px rgba(0,0,0,.2)}.product-logo img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+    .product-logo.logo-freefire{background:#11131b}.product-logo.logo-freefire img{height:auto;max-height:36px;object-fit:contain}.product-logo.logo-mlbb{background:#101d37}.product-logo.logo-alightmotion{background:#1d2238}
+    .product-title{min-width:0;flex:1}.product-title h3{margin:0;font:700 14px/1.3 "Space Grotesk",sans-serif;overflow-wrap:anywhere}.product-title small{display:block;margin-top:5px;color:#9ca8c3;font-size:9px}
+    .product-tag{align-self:flex-start;flex:0 0 auto;padding:6px 8px;border-radius:999px;color:#b4f7f3;background:rgba(82,228,223,.08);border:1px solid rgba(82,228,223,.14);font-size:8px;font-weight:800;letter-spacing:.6px}
+    .product-body{padding:16px 17px 17px}.product-body p{min-height:39px;margin:0 0 14px;color:#a9b4ce;font-size:11px;line-height:1.7}.product-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:14px}.product-meta span:first-child{color:#929fbd;font-size:9px;font-weight:700}.product-price{color:var(--gold);font:700 12px "Space Grotesk",sans-serif;text-align:right}.card-actions{display:flex;gap:8px}.card-actions .btn{flex:1}.empty-state{grid-column:1/-1;padding:44px 20px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:20px}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    .info-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.info-panel{padding:24px;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,rgba(20,27,51,.95),rgba(12,17,34,.95))}.info-panel h3{margin:0 0 9px;font:700 18px "Space Grotesk",sans-serif}.info-panel p,.info-panel li{color:#aab5cf;font-size:11px;line-height:1.8}.info-panel ul{padding-left:18px;margin:12px 0 0}.payment-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.payment-chip{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.035);font-size:11px;font-weight:800}.payment-symbol{width:23px;height:23px;display:grid;place-items:center;border-radius:7px;background:linear-gradient(140deg,#52e4df,#8b72ff);color:#091020;font-size:10px}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{padding:21px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.step-number{color:var(--cyan);font:700 24px "Space Grotesk",sans-serif}.step h3{margin:12px 0 7px;font:700 15px "Space Grotesk",sans-serif}.step p{margin:0;color:#9da9c4;font-size:11px;line-height:1.75}
+    .contact-panel{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 28px;border:1px solid rgba(82,228,223,.2);border-radius:23px;background:linear-gradient(110deg,rgba(82,228,223,.08),rgba(139,114,255,.13),rgba(255,93,145,.06))}.contact-panel h2{margin:7px 0 5px;font:700 clamp(23px,3vw,32px) "Space Grotesk",sans-serif}.contact-panel p{margin:0;color:#aeb9d1;font-size:11px}
+    footer{padding:24px 0 32px;border-top:1px solid var(--line);color:#7f8ba9;font-size:10px}.footer-row{display:flex;justify-content:space-between;gap:14px;align-items:center}.footer-row strong{color:#cbd5eb}.footer-note{margin-top:10px;color:#687594;font-size:9px;line-height:1.7}
+    .back-top{position:fixed;right:24px;bottom:94px;z-index:30;width:40px;height:40px;border:1px solid var(--line);border-radius:13px;background:rgba(19,25,47,.9);color:var(--cyan);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s}.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+    .wa-float{position:fixed;right:22px;bottom:22px;z-index:80;width:58px;height:58px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:#20c96b;box-shadow:0 12px 32px rgba(32,201,107,.34);cursor:grab;touch-action:none;user-select:none;transition:box-shadow .2s,filter .2s}.wa-float:active{cursor:grabbing}.wa-float:hover{filter:brightness(1.08);box-shadow:0 14px 38px rgba(32,201,107,.48)}.wa-float svg{width:31px;height:31px;fill:white;pointer-events:none}.wa-float::after{content:"";position:absolute;inset:-5px;border:1px solid rgba(32,201,107,.45);border-radius:50%;animation:waPulse 2.4s infinite;pointer-events:none}
+    .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(2,5,14,.78);backdrop-filter:blur(9px)}.modal.show{display:flex;animation:fadeIn .18s ease}.modal-dialog{position:relative;width:min(760px,100%);max-height:min(88vh,850px);overflow:hidden;border:1px solid rgba(173,190,255,.2);border-radius:24px;background:linear-gradient(155deg,#151b34,#0c1123);box-shadow:0 30px 90px rgba(0,0,0,.58);animation:modalIn .22s ease}
+    .modal-head{position:relative;display:flex;align-items:center;gap:16px;padding:23px 58px 21px 22px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 90% 0,rgba(139,114,255,.17),transparent 45%),rgba(255,255,255,.015)}
+    .modal-logo{width:72px;height:72px;flex:0 0 72px;display:grid;place-items:center;padding:8px;border-radius:19px;background:#f8f9ff}.modal-logo.logo-freefire{background:#11131b}.modal-logo.logo-freefire img{height:auto;max-height:42px;object-fit:contain}.modal-logo.logo-mlbb{background:#101d37}.modal-logo.logo-alightmotion{background:#1d2238}.modal-logo img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+    .modal-category{color:var(--cyan);font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}.modal-title-wrap h2{margin:4px 0 3px;font:700 22px/1.2 "Space Grotesk",sans-serif}.modal-title-wrap p{margin:0;color:#a5b1cb;font-size:11px}.modal-close{position:absolute;right:16px;top:16px;width:36px;height:36px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.05);color:#dce5fa;cursor:pointer;font-size:17px}
+    .modal-body{padding:19px 22px 22px;overflow:auto;max-height:calc(88vh - 116px)}.modal-info{margin:0 0 15px;color:#aab6d0;font-size:11px;line-height:1.8}.game-id-fields{display:none;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 15px;padding:13px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.game-id-fields.show{display:grid}.field-label{display:block;margin-bottom:5px;color:#aab6d0;font-size:9px;font-weight:800}.field-input{width:100%;min-height:40px;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:#0b1020;color:var(--ink);outline:none;font-size:11px}.field-input:focus{border-color:rgba(82,228,223,.6)}
+    .variant-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:11px}.variant-tools h3{margin:0;font:700 13px "Space Grotesk",sans-serif}.variant-tools .search{flex:0 1 220px;min-height:38px;padding:0 10px}.variant-tools .search input{font-size:10px}
+    .variant-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}.variant-row{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.variant-main{min-width:0;flex:1}.variant-name{display:block;color:#f1f4ff;font-size:11px;font-weight:800;overflow-wrap:anywhere}.variant-price{display:block;margin-top:5px;color:var(--gold);font:700 11px "Space Grotesk",sans-serif}.variant-price .old-price{margin-right:6px;color:#78839f;font-size:9px;text-decoration:line-through;font-weight:500}.variant-note{display:block;margin-top:4px;color:#8491ae;font-size:9px;line-height:1.45}.stock-badge{display:inline-flex;align-items:center;gap:5px;margin-top:7px;color:#b6c0d6;font-size:8px;font-weight:800}.stock-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:#9ca8c3}.stock-badge.available{color:#78edb1}.stock-badge.available::before{background:#51dfa0}.stock-badge.limited{color:#ffd17a}.stock-badge.limited::before{background:#ffd17a}.stock-badge.out_of_stock{color:#ff899b}.stock-badge.out_of_stock::before{background:#ff778d}.variant-row .btn{flex:0 0 auto}.modal-footer{display:flex;gap:9px;margin-top:17px;padding-top:15px;border-top:1px solid var(--line)}.modal-footer .btn{flex:1}
+    @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 13px var(--cyan)}50%{opacity:.55;box-shadow:0 0 4px var(--cyan)}}@keyframes orbit{to{rotate:360deg}}@keyframes float{0%,100%{translate:0 0}50%{translate:0 -9px}}@keyframes ticker{to{transform:translateX(-50%)}}@keyframes waPulse{0%{transform:scale(.94);opacity:.75}100%{transform:scale(1.42);opacity:0}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes modalIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @media(max-width:1020px){.nav-links{gap:14px}.hero-grid{gap:28px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-stage{min-height:390px}}
+    @media(max-width:780px){.nav{min-height:70px}.menu-toggle{display:inline-grid;place-items:center}.nav-actions>.btn{display:none}.nav-links{position:absolute;left:20px;right:20px;top:calc(100% + 8px);display:none;align-items:stretch;gap:0;padding:9px;border:1px solid var(--line);border-radius:16px;background:rgba(12,17,34,.98);box-shadow:var(--shadow)}.nav-links.open{display:flex;flex-direction:column;animation:fadeIn .15s ease}.nav-links a{padding:12px;border-radius:10px}.nav-links a:hover{background:rgba(255,255,255,.04)}.hero{padding-top:45px}.hero-grid{grid-template-columns:1fr}.hero-stage{min-height:350px}.trust-strip{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}.contact-panel{align-items:flex-start;flex-direction:column}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.container{width:min(var(--max),calc(100% - 28px))}.brand-logo{width:60px;height:42px}.brand-text{font-size:13px}.brand-sub{font-size:8px}.hero h1{font-size:42px;letter-spacing:-2px}.hero-stage{min-height:310px}.stage-chip{padding:8px 9px}.stage-chip img{width:25px;height:25px}.stage-chip strong{font-size:9px}.stage-chip small{font-size:8px}.chip-a{left:10px;top:17px}.chip-b{right:9px;top:90px}.chip-c{left:12px;bottom:20px}.chip-d{right:9px;bottom:19px}.stage-core{width:145px;height:100px}.stage-label{top:13px;font-size:7px}.stage-caption{bottom:10px;font-size:7px}.trust-strip{gap:10px;padding:13px}.trust-item{font-size:9px}.section{padding:36px 0}.section-head{align-items:flex-start;flex-direction:column}.product-grid{grid-template-columns:1fr;gap:12px}.product-top{min-height:100px}.steps-grid{grid-template-columns:1fr}.filters{gap:6px}.filter{padding:9px 11px;font-size:9px}.variant-list{grid-template-columns:1fr}.modal{padding:9px}.modal-dialog{max-height:94vh;border-radius:19px}.modal-head{padding:17px 52px 16px 15px;gap:11px}.modal-logo{width:57px;height:57px;flex-basis:57px}.modal-title-wrap h2{font-size:17px}.modal-body{padding:15px;max-height:calc(94vh - 90px)}.game-id-fields{grid-template-columns:1fr}.variant-tools{align-items:stretch;flex-direction:column}.variant-tools .search{flex-basis:auto}.variant-row{padding:11px}.wa-float{right:15px;bottom:15px;width:54px;height:54px}.back-top{right:21px;bottom:82px}.contact-panel{padding:21px}.hero-actions .btn{flex:1}.trust-strip{grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#beranda" aria-label="RUANGDIGITAL190 beranda">
+        <img class="brand-logo" id="brandLogo" src="assets/brand/ruangdigital-logo.jpg" data-fallback="assets/brand/ruangdigital-logo.jpg" alt="Logo RUANGDIGITAL190">
+        <span><span class="brand-text" id="brandName">RUANGDIGITAL190</span><span class="brand-sub">PREMIUM DIGITAL STORE</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#beranda" data-nav="beranda" class="active">Home</a>
+        <a href="#produk" data-nav="produk" data-filter-target="all">Semua Produk</a>
+        <a href="#produk" data-filter-target="apps">Aplikasi Premium</a>
+        <a href="#produk" data-filter-target="games">Game Top Up</a>
+        <a href="#informasi" data-nav="informasi">Informasi</a>
+        <a href="#kontak" data-nav="kontak">Kontak</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary" id="navWA" href="#" target="_blank" rel="noopener">WhatsApp Admin ↗</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="eyebrow"><span class="live-dot"></span> DIGITAL GOODS · PREMIUM APPS · GAME TOP UP</div>
+            <h1>YOUR DIGITAL NEEDS, <span class="gradient-text">ONE PLACE.</span></h1>
+            <p class="hero-copy" id="heroDescription">Temukan aplikasi premium, layanan digital, dan kebutuhan top-up game dalam satu tempat. Pilih produk, lihat detail paket dan harga, lalu konfirmasi ketersediaan melalui WhatsApp.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#produk">Jelajahi Produk ↓</a>
+              <a class="btn btn-ghost" id="heroWA" href="#" target="_blank" rel="noopener">Hubungi Admin ↗</a>
+            </div>
+            <div class="hero-points"><span><b class="check">✓</b> Katalog mudah dipilih</span><span><b class="check">✓</b> Harga transparan</span><span><b class="check">✓</b> Konfirmasi stok via WA</span></div>
+          </div>
+          <div class="hero-stage reveal" aria-label="Ilustrasi toko digital RUANGDIGITAL190">
+            <div class="stage-label">WELCOME TO RUANGDIGITAL190</div>
+            <div class="stage-core"><img id="heroLogo" src="assets/brand/ruangdigital-logo.jpg" data-fallback="assets/brand/ruangdigital-logo.jpg" alt="RUANGDIGITAL190" loading="eager"></div>
+            <div class="stage-chip chip-a"><img src="https://cdn.simpleicons.org/netflix/E50914" data-fallback="assets/logos/netflix.svg" alt="Netflix"><span><strong>PREMIUM APPS</strong><small>Streaming & productivity</small></span></div>
+            <div class="stage-chip chip-b"><img src="https://play-lh.googleusercontent.com/MztmLpB1-_eFbHnqNzzvzl5zjiOH2BEb0D71uBxZYf_4BEmW3QEPWODhRtyqY7Qz4wRLwQ--Rg1RAjOFqtHSs-o%3Dw240-h480" data-fallback="assets/logos/mlbb.svg" alt="Mobile Legends"><span><strong>GAME TOP UP</strong><small>MLBB & Free Fire</small></span></div>
+            <div class="stage-chip chip-c"><img src="https://cdn.simpleicons.org/spotify/1DB954" data-fallback="assets/logos/spotify.svg" alt="Spotify"><span><strong>ONE DIGITAL PLACE</strong><small>Pilih · Cek · Pesan</small></span></div>
+            <div class="stage-chip chip-d"><img src="https://play-lh.googleusercontent.com/LRjRXaVEtoeHyiFcnMLCHs1ZJV8Q4q70PggflRDAfgOkulzFTbJg65y0drg6Yapo22Xoos_XCbyh7EgycBhQ%3Dw240-h480" data-fallback="assets/logos/alightmotion.svg" alt="Alight Motion"><span><strong>EDITING TOOLS</strong><small>Creative essentials</small></span></div>
+            <div class="stage-caption">BROWSE · CHOOSE · CHAT ADMIN</div>
+          </div>
+        </div>
+        <div class="trust-strip reveal">
+          <div class="trust-item"><span class="trust-icon">▦</span> Pilihan produk digital</div>
+          <div class="trust-item"><span class="trust-icon">◇</span> Detail paket jelas</div>
+          <div class="trust-item"><span class="trust-icon">◷</span> Konfirmasi stok</div>
+          <div class="trust-item"><span class="trust-icon">↗</span> Pesan langsung via WA</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker-wrap" aria-label="Produk unggulan berjalan">
+      <div class="container"><div class="ticker-label">PILIH BRAND FAVORITMU — KLIK UNTUK MELIHAT DETAIL</div></div>
+      <div class="ticker-window"><div class="ticker-track" id="tickerTrack"></div></div>
+    </section>
+
+    <section class="section" id="produk">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">KATALOG PRODUK</div><h2>Temukan yang kamu butuhkan.</h2><p>Pilih satu produk untuk melihat detail khusus, pilihan paket, harga, dan status stok. Detail produk lain tidak akan ikut terbuka.</p></div></div>
+        <div class="catalog-tools">
+          <label class="search"><span aria-hidden="true">⌕</span><input id="productSearch" type="search" placeholder="Cari Netflix, Alight Motion, Diamond MLBB..." autocomplete="off" aria-label="Cari produk"></label>
+          <div class="filters" id="filters" aria-label="Filter kategori"></div>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="cara-order">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">CARA PEMESANAN</div><h2>Order dalam tiga langkah.</h2><p>Pilih paket dengan teliti, kemudian lanjutkan konfirmasi melalui WhatsApp admin.</p></div></div>
+        <div class="steps-grid">
+          <article class="step reveal"><div class="step-number">01</div><h3>Pilih produk</h3><p>Buka detail aplikasi atau pilih nominal Diamond MLBB maupun Free Fire yang kamu inginkan.</p></article>
+          <article class="step reveal"><div class="step-number">02</div><h3>Kirim pertanyaan</h3><p>Tekan tombol pesan. WhatsApp akan terbuka dengan nama produk, paket, dan harga yang sudah terisi.</p></article>
+          <article class="step reveal"><div class="step-number">03</div><h3>Konfirmasi admin</h3><p>Pastikan stok, detail akun game, nominal pembayaran, dan ketentuan paket sudah benar sebelum transaksi.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="informasi">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="kicker">INFORMASI TOKO</div><h2>Belanja digital lebih praktis.</h2><p>Periksa informasi produk dan konfirmasikan ketersediaan langsung kepada admin.</p></div></div>
+        <div class="info-grid">
+          <article class="info-panel reveal"><h3 id="aboutTitle">Ruang digital untuk kebutuhanmu.</h3><p id="aboutDescription">RUANGDIGITAL190 menyediakan katalog aplikasi premium dan top up game. Pilih paket yang diinginkan, lalu hubungi admin untuk konfirmasi harga dan stok terbaru.</p><ul><li>Harga aplikasi yang belum ditetapkan ditampilkan sebagai “Hubungi Admin”.</li><li>Harga diamond mengikuti daftar harga toko yang tercantum di katalog.</li><li>Status stok perlu dikonfirmasi melalui WhatsApp sebelum pembayaran.</li><li>Periksa kembali User ID dan Zone ID untuk top up game.</li></ul></article>
+          <article class="info-panel reveal"><h3>Metode pembayaran</h3><p>Metode pembayaran yang dicantumkan pada informasi toko:</p><div class="payment-list" id="paymentList"></div><p style="margin-top:14px">Lakukan pembayaran setelah admin mengonfirmasi detail pesanan, ketersediaan stok, dan nominal yang harus dibayarkan.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontak">
+      <div class="container">
+        <div class="contact-panel reveal"><div><div class="kicker">BUTUH BANTUAN?</div><h2>Sudah menemukan paketmu?</h2><p>Hubungi admin untuk menanyakan harga, stok, dan detail pemesanan.</p></div><a class="btn btn-wa" id="contactWA" href="#" target="_blank" rel="noopener">Chat Admin WhatsApp ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><div class="footer-row"><span>© <span id="year"></span> <strong id="footerName">RUANGDIGITAL190</strong>. All rights reserved.</span><span>Premium Apps · Game Top Up · GitHub Pages Ready</span></div><p class="footer-note">Nama produk dan logo merek merupakan milik masing-masing pemegang hak. Penayangan hanya untuk identifikasi produk dan tidak menyatakan afiliasi atau dukungan resmi. Harga dan stok dapat berubah; konfirmasikan kepada admin sebelum pembayaran.</p></div></footer>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Kembali ke atas">↑</button>
+  <a class="wa-float" id="floatingWA" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp RUANGDIGITAL190" title="Klik untuk chat atau geser tombol" role="link" tabindex="0">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C8.84 3 3 8.72 3 15.78c0 2.26.61 4.46 1.78 6.39L3 29l7.1-1.84a13.2 13.2 0 0 0 5.94 1.42h.01c7.2 0 13.03-5.72 13.03-12.78C29.08 8.72 23.24 3 16.04 3Zm0 23.45h-.01a10.88 10.88 0 0 1-5.51-1.49l-.4-.24-4.22 1.09 1.13-4.08-.27-.42a10.57 10.57 0 0 1-1.64-5.54c0-5.87 4.9-10.65 10.92-10.65 6.03 0 10.93 4.78 10.93 10.66 0 5.87-4.9 10.66-10.93 10.66Zm6-7.95c-.33-.16-1.95-.95-2.25-1.05-.3-.1-.52-.16-.73.16-.21.31-.83 1.05-1.01 1.26-.18.21-.37.23-.7.08-.33-.16-1.38-.49-2.63-1.55-.97-.83-1.63-1.84-1.82-2.15-.19-.31-.02-.48.14-.63.14-.14.33-.37.49-.55.16-.18.21-.31.31-.52.1-.2.05-.39-.03-.55-.08-.16-.73-1.76-1-2.42-.27-.64-.54-.55-.73-.56l-.62-.01c-.21 0-.55.08-.83.39-.28.31-1.09 1.07-1.09 2.61 0 1.54 1.12 3.03 1.28 3.24.19.2 2.2 3.36 5.34 4.71.75.33 1.34.52 1.8.67.76.24 1.46.2 2 .12.61-.09 1.95-.79 2.22-1.55.28-.76.2-1.4.2-1.55-.08-.16-.29-.26-.62-.42Z"/></svg>
+  </a>
+
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-head"><button class="modal-close" id="closeModal" type="button" aria-label="Tutup detail produk">×</button><div class="modal-logo" id="modalLogoFrame"><img id="modalLogo" src="" alt=""></div><div class="modal-title-wrap"><div class="modal-category" id="modalCategory"></div><h2 id="modalTitle">Detail Produk</h2><p id="modalSubtitle"></p></div></div>
+      <div class="modal-body"><p class="modal-info" id="modalInfo"></p>
+        <div class="game-id-fields" id="gameIdFields"></div>
+        <div class="variant-tools"><h3 id="variantHeading">Pilihan paket</h3><label class="search" id="variantSearchWrap" hidden><span aria-hidden="true">⌕</span><input id="variantSearch" type="search" placeholder="Cari nominal diamond..." aria-label="Cari paket"></label></div>
+        <div class="variant-list" id="variantList"></div>
+        <div class="modal-footer"><a class="btn btn-primary" id="modalWA" href="#" target="_blank" rel="noopener">Tanya Admin ↗</a><button class="btn btn-ghost" id="modalDone" type="button">Tutup</button></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+/* =====================================================================
+   PENGATURAN TOKO — EDIT BAGIAN INI TERLEBIH DAHULU
+   Nomor WhatsApp: format Indonesia internasional tanpa +, spasi, atau -.
+   Website GitHub Pages bersifat statis; perubahan harus di-commit ke GitHub
+   agar tampil untuk semua pengunjung.
+===================================================================== */
+const STORE_CONFIG = {
+  storeName: "RUANGDIGITAL190",
+  whatsappNumber: "6285725423328",
+  heroDescription: "Temukan aplikasi premium, layanan digital, dan kebutuhan top-up game dalam satu tempat. Pilih produk, lihat detail paket dan harga, lalu konfirmasi ketersediaan melalui WhatsApp.",
+  aboutDescription: "RUANGDIGITAL190 menyediakan katalog aplikasi premium dan top up game. Pilih paket yang diinginkan, lalu hubungi admin untuk konfirmasi harga dan stok terbaru.",
+  logo: "assets/brand/ruangdigital-logo.jpg",
+  paymentMethods: ["GoPay", "QRIS", "DANA", "SeaBank"],
+  instagramUrl: "", // Isi jika sudah ada akun Instagram toko.
+  tiktokUrl: "" // Isi jika sudah ada akun TikTok toko.
+};
+
+/* =====================================================================
+   DATA PRODUK — UBAH NAMA, DESKRIPSI, LOGO, VARIAN, HARGA, DISKON, STOK
+   price/originalPrice: angka rupiah tanpa titik, contoh 45000.
+   price: null = harga belum tersedia; website tidak akan menampilkan Rp0.
+   stock: available | limited | out_of_stock | confirm.
+   discountEnabled hanya akan aktif jika harga diskon < harga normal.
+===================================================================== */
+const PRODUCTS = [
+  {
+    id: "netflix", brand: "Netflix", title: "Netflix Premium", group: "apps", category: "Streaming", tag: "Streaming",
+    logo: "https://cdn.simpleicons.org/netflix/E50914", fallback: "assets/logos/netflix.svg",
+    short: "Pilihan paket Netflix untuk menikmati film, serial, dan dokumenter.",
+    description: "Pilih jenis paket Netflix yang tersedia dan periksa ketentuan penggunaannya sebelum memesan.",
+    info: "Admin akan membantu mengonfirmasi slot, profil, masa aktif, dan ketentuan paket yang dipilih.",
+    variants: [
+      { name: "2U1P — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan slot kepada admin." },
+      { name: "1U1P — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan slot kepada admin." },
+      { name: "Semiprivat — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan slot kepada admin." }
+    ]
+  },
+  {
+    id: "spotify", brand: "Spotify", title: "Spotify Premium", group: "apps", category: "Streaming", tag: "Music",
+    logo: "https://cdn.simpleicons.org/spotify/1DB954", fallback: "assets/logos/spotify.svg",
+    short: "Layanan musik dan podcast untuk menemani aktivitas sehari-hari.",
+    description: "Tanyakan pilihan paket Spotify Premium yang tersedia kepada admin.",
+    info: "Durasi, jenis akun, dan metode aktivasi perlu dikonfirmasi sebelum pembayaran.",
+    variants: [
+      { name: "Paket Spotify Premium", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Tanyakan durasi dan jenis paket yang tersedia." }
+    ]
+  },
+  {
+    id: "youtube", brand: "YouTube", title: "YouTube Premium", group: "apps", category: "Streaming", tag: "Video",
+    logo: "https://cdn.simpleicons.org/youtube/FF0033", fallback: "assets/logos/youtube.svg",
+    short: "Pengalaman menonton video dengan layanan YouTube Premium.",
+    description: "Tanyakan pilihan paket YouTube Premium yang tersedia kepada admin.",
+    info: "Jenis akses, masa aktif, dan ketentuan paket akan dikonfirmasi oleh admin.",
+    variants: [
+      { name: "Paket YouTube Premium", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Tanyakan durasi dan jenis paket yang tersedia." }
+    ]
+  },
+  {
+    id: "capcut", brand: "CapCut", title: "CapCut Premium", group: "apps", category: "Editing", tag: "Video Editing",
+    logo: "https://cdn.simpleicons.org/capcut/111111", fallback: "assets/logos/capcut.svg",
+    short: "Fitur editing video premium untuk konten yang lebih maksimal.",
+    description: "Paket CapCut Premium untuk kebutuhan editing video dan pembuatan konten.",
+    info: "Tanyakan detail aktivasi, masa aktif, dan ketentuan akses kepada admin.",
+    variants: [
+      { name: "Privat — 7 Hari", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Harga dan stok dikonfirmasi admin." },
+      { name: "Privat — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Harga dan stok dikonfirmasi admin." }
+    ]
+  },
+  {
+    id: "alightmotion", brand: "Alight Motion", title: "Alight Motion Premium", group: "apps", category: "Editing", tag: "Motion Design",
+    logo: "https://play-lh.googleusercontent.com/LRjRXaVEtoeHyiFcnMLCHs1ZJV8Q4q70PggflRDAfgOkulzFTbJg65y0drg6Yapo22Xoos_XCbyh7EgycBhQ%3Dw240-h480", fallback: "assets/logos/alightmotion.svg",
+    short: "Motion graphic, animasi, efek visual, dan editing video di perangkat mobile.",
+    description: "Tersedia pilihan aktivasi menggunakan email seller atau email buyer.",
+    info: "Konfirmasi alur aktivasi, masa aktif, dan ketentuan penggunaan sebelum order. Logo utama menggunakan ikon aplikasi dari listing Google Play.",
+    variants: [
+      { name: "Email Seller — 1 Tahun", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Harga dan stok dikonfirmasi admin." },
+      { name: "Email Buyer — 1 Tahun", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Harga dan stok dikonfirmasi admin." }
+    ]
+  },
+  {
+    id: "canva", brand: "Canva", title: "Canva Pro & Canva Head", group: "apps", category: "Editing", tag: "Design",
+    logo: "https://cdn.simpleicons.org/canva/00C4CC", fallback: "assets/logos/canva.svg",
+    short: "Desain presentasi, poster, konten, dan materi kreatif.",
+    description: "Tersedia pilihan Canva Pro Member, Canva Head, dan Lifetime.",
+    info: "Perhatikan jenis undangan email dan tipe akun pada setiap varian. Hubungi admin untuk memastikan ketentuan paket.",
+    variants: [
+      { name: "Pro Member — 1 Bulan (Invite Email Buyer)", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan ketentuan aktivasi." },
+      { name: "Pro Member — 2 Bulan (Invite Email Buyer)", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan ketentuan aktivasi." },
+      { name: "Pro Member — 3 Bulan (Invite Email Buyer)", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan ketentuan aktivasi." },
+      { name: "Canva Head — 1 Bulan Full", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan ketentuan aktivasi." },
+      { name: "Canva Lifetime (Invite Email Buyer)", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan ketentuan aktivasi." },
+      { name: "Canva Head Lifetime", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan ketentuan aktivasi." }
+    ]
+  },
+  {
+    id: "chatgpt", brand: "ChatGPT", title: "ChatGPT Plan", group: "apps", category: "AI & Produktivitas", tag: "AI Assistant",
+    logo: "https://cdn.simpleicons.org/openai/111111", fallback: "assets/logos/chatgpt.svg",
+    short: "Asisten AI untuk ide, belajar, menulis, dan produktivitas.",
+    description: "Lihat pilihan paket ChatGPT yang tersedia.",
+    info: "Pastikan memahami jenis akses sharing dan ketentuan penggunaan sebelum melakukan pemesanan.",
+    variants: [
+      { name: "GO Sharing — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Harga dan stok dikonfirmasi admin." },
+      { name: "Plus Sharing — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Harga dan stok dikonfirmasi admin." },
+      { name: "GO Sharing — 3 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Harga dan stok dikonfirmasi admin." }
+    ]
+  },
+  {
+    id: "gemini", brand: "Gemini", title: "Gemini AI + Google Drive", group: "apps", category: "AI & Produktivitas", tag: "AI & Cloud",
+    logo: "https://cdn.simpleicons.org/googlegemini/8E75B2", fallback: "assets/logos/gemini.svg",
+    short: "Pilihan layanan Gemini AI, Google Drive 2TB, dan Veo sesuai paket.",
+    description: "Paket dengan kombinasi Gemini AI, Google Drive 2TB, dan Veo sesuai jenis akses.",
+    info: "Masa aktif dan jenis akses berbeda pada setiap paket. Pastikan detail layanan dikonfirmasi oleh admin.",
+    variants: [
+      { name: "Gemini AI + GDrive 2TB + Veo Invite — 18 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi detail akses dan masa aktif." },
+      { name: "Gemini AI + GDrive 2TB + Veo Head / Owner — 1 Tahun", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi detail akses dan masa aktif." }
+    ]
+  },
+  {
+    id: "grammarly", brand: "Grammarly", title: "Grammarly Premium", group: "apps", category: "AI & Produktivitas", tag: "Writing",
+    logo: "https://cdn.simpleicons.org/grammarly/15C39A", fallback: "assets/logos/grammarly.svg",
+    short: "Bantu mengecek tata bahasa, ejaan, dan kualitas tulisan.",
+    description: "Pilihan Grammarly Premium untuk kebutuhan menulis, belajar, dan pekerjaan.",
+    info: "Tanyakan perbedaan akses sharing dan privat kepada admin sebelum memesan.",
+    variants: [
+      { name: "Sharing — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan akses." },
+      { name: "Privat — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan akses." }
+    ]
+  },
+  {
+    id: "quillbot", brand: "QuillBot", title: "QuillBot Premium", group: "apps", category: "AI & Produktivitas", tag: "Writing",
+    logo: "https://cdn.simpleicons.org/quillbot/3CBEA7", fallback: "assets/logos/quillbot.svg",
+    short: "Alat bantu parafrase dan penyuntingan tulisan.",
+    description: "Paket QuillBot Premium untuk membantu proses penyuntingan dan parafrase.",
+    info: "Tanyakan stok dan detail akses kepada admin.",
+    variants: [
+      { name: "Sharing — 1 Bulan", price: null, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi harga dan akses." }
+    ]
+  },
+  {
+    id: "mlbb", brand: "Mobile Legends", title: "Mobile Legends: Bang Bang", group: "games", category: "Game Top Up", tag: "25 Paket Diamond",
+    logo: "https://play-lh.googleusercontent.com/MztmLpB1-_eFbHnqNzzvzl5zjiOH2BEb0D71uBxZYf_4BEmW3QEPWODhRtyqY7Qz4wRLwQ--Rg1RAjOFqtHSs-o%3Dw240-h480", fallback: "assets/logos/mlbb.svg",
+    short: "Top up Diamond MLBB dengan 25 pilihan nominal dan harga tertera.",
+    description: "Pilih nominal Diamond Mobile Legends: Bang Bang. Masukkan User ID dan Zone ID saat menghubungi admin.",
+    info: "Harga mengikuti daftar harga toko. Periksa kembali User ID dan Zone ID sebelum melakukan pembayaran. Logo utama menggunakan ikon aplikasi resmi di Google Play.",
+    variants: [
+      { name: "30 Diamond", price: 11000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "85 Diamond", price: 28000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "100 Diamond", price: 33000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "148 Diamond", price: 48000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "240 Diamond", price: 75000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "305 Diamond", price: 95000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "370 Diamond", price: 115000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "408 Diamond", price: 125000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "518 Diamond", price: 160000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "568 Diamond", price: 170000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "716 Diamond", price: 215000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "790 Diamond", price: 238000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "875 Diamond", price: 258000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "966 Diamond", price: 285000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1065 Diamond", price: 318000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1136 Diamond", price: 338000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1358 Diamond", price: 405000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1506 Diamond", price: 440000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1704 Diamond", price: 500000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "2010 Diamond", price: 555000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "2232 Diamond", price: 620000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "2578 Diamond", price: 720000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "2855 Diamond", price: 805000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "3024 Diamond", price: 850000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "3198 Diamond", price: 900000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." }
+    ]
+  },
+  {
+    id: "freefire", brand: "Free Fire", title: "Free Fire Diamond", group: "games", category: "Game Top Up", tag: "20 Diamond + 3 Membership",
+    logo: "https://cdn.wildflamestudio.com/common/web_event/official2/dist/client/img/full_logo.969f536.png", fallback: "assets/logos/freefire.svg",
+    short: "20 pilihan nominal Diamond, Membership Mingguan, BP Card, dan Membership Bulanan.",
+    description: "Pilih nominal Diamond atau item membership Free Fire. Harga ditampilkan sesuai daftar harga toko.",
+    info: "Pastikan Player ID benar sebelum transaksi. Logo utama menggunakan aset logo Free Fire dari halaman brand resmi Garena.",
+    variants: [
+      { name: "50 Diamond", price: 8000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "90 Diamond", price: 14000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "100 Diamond", price: 16000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "140 Diamond", price: 19000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "200 Diamond", price: 27000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "355 Diamond", price: 45000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "720 Diamond", price: 85000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "800 Diamond", price: 95000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1000 Diamond", price: 120000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1440 Diamond", price: 170000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "1800 Diamond", price: 210000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "2180 Diamond", price: 255000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "2720 Diamond", price: 330000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "3640 Diamond", price: 420000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "4000 Diamond", price: 460000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "4450 Diamond", price: 510000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "5500 Diamond", price: 620000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "6000 Diamond", price: 685000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "6550 Diamond", price: 750000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "7290 Diamond", price: 830000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "Membership Mingguan", price: 28000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "BP Card", price: 42000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." },
+      { name: "Membership Bulanan", price: 78000, originalPrice: null, discountEnabled: false, stock: "confirm", note: "Konfirmasi stok sebelum pembayaran." }
+    ]
+  }
+];
+
+/* =====================================================================
+   FUNGSI WEBSITE — UMUMNYA TIDAK PERLU DIUBAH
+===================================================================== */
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+const escapeHTML = (value) => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
+const money = value => value === null || value === undefined || value === "" ? "Harga belum tersedia" : new Intl.NumberFormat("id-ID", {style:"currency",currency:"IDR",maximumFractionDigits:0}).format(value);
+const waLink = message => `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+const statusText = status => ({available:"Tersedia",limited:"Stok terbatas",out_of_stock:"Stok habis",confirm:"Konfirmasi stok"}[status] || "Konfirmasi stok");
+const statusClass = status => ["available","limited","out_of_stock"].includes(status) ? status : "confirm";
+const productById = id => PRODUCTS.find(product => product.id === id);
+let activeFilter = "all";
+let activeProduct = null;
+let previousFocus = null;
+let lastScrollY = 0;
+
+function validDiscount(variant){
+  return Boolean(variant.discountEnabled && Number.isFinite(variant.originalPrice) && Number.isFinite(variant.price) && variant.originalPrice > variant.price);
+}
+function variantPriceText(variant){
+  if(validDiscount(variant)) return `<span class="old-price">${money(variant.originalPrice)}</span>${money(variant.price)}`;
+  return money(variant.price);
+}
+function productPriceLabel(product){
+  const prices = product.variants.map(v => v.price).filter(v => Number.isFinite(v) && v > 0);
+  if(!prices.length) return "Harga via admin";
+  return `Mulai ${money(Math.min(...prices))}`;
+}
+function productLogoHTML(product, extraClass=""){
+  const logoClass = `product-logo logo-${product.id} ${extraClass}`.trim();
+  return `<div class="${logoClass}"><img src="${escapeHTML(product.logo)}" data-fallback="${escapeHTML(product.fallback)}" alt="Logo ${escapeHTML(product.brand)}" loading="lazy" decoding="async"></div>`;
+}
+function wireLogoFallbacks(root=document){
+  $$('img[data-fallback]',root).forEach(img => {
+    if(img.dataset.fallbackBound) return;
+    img.dataset.fallbackBound = "1";
+    img.addEventListener("error", () => {
+      if(img.dataset.fallback && !img.dataset.fallbackUsed){img.dataset.fallbackUsed="1";img.src=img.dataset.fallback;}
+    }, {once:true});
+  });
+}
+function initStoreContent(){
+  document.title = `${STORE_CONFIG.storeName} — Premium Digital Store`;
+  $("#brandName").textContent = STORE_CONFIG.storeName;
+  $("#footerName").textContent = STORE_CONFIG.storeName;
+  $("#brandLogo").src = STORE_CONFIG.logo;
+  $("#heroLogo").src = STORE_CONFIG.logo;
+  $("#heroDescription").textContent = STORE_CONFIG.heroDescription;
+  $("#aboutDescription").textContent = STORE_CONFIG.aboutDescription;
+  $("#year").textContent = new Date().getFullYear();
+  const generalMessage = `Halo Admin ${STORE_CONFIG.storeName}! Saya ingin menanyakan produk dan paket yang tersedia. Apakah stok masih ada? Mohon informasi harga dan ketersediaan terbaru. Terima kasih.`;
+  ["#navWA","#heroWA","#contactWA","#floatingWA"].forEach(selector => { const el=$(selector); if(el) el.href=waLink(generalMessage); });
+  $("#paymentList").innerHTML = STORE_CONFIG.paymentMethods.map(method => `<span class="payment-chip"><i class="payment-symbol">${escapeHTML(method.slice(0,1))}</i>${escapeHTML(method)}</span>`).join("");
+}
+
+const FILTERS = [
+  {id:"all",label:"Semua Produk"},
+  {id:"apps",label:"Aplikasi Premium"},
+  {id:"streaming",label:"Streaming"},
+  {id:"editing",label:"Editing"},
+  {id:"ai",label:"AI & Produktivitas"},
+  {id:"games",label:"Game Top Up"},
+  {id:"diamonds",label:"Diamond"},
+  {id:"mlbb",label:"Mobile Legends"},
+  {id:"freefire",label:"Free Fire"}
+];
+function productMatchesFilter(product){
+  if(activeFilter === "all") return true;
+  if(activeFilter === "apps") return product.group === "apps";
+  if(activeFilter === "games" || activeFilter === "diamonds") return product.group === "games";
+  if(activeFilter === "streaming") return product.category === "Streaming";
+  if(activeFilter === "editing") return product.category === "Editing";
+  if(activeFilter === "ai") return product.category === "AI & Produktivitas";
+  if(activeFilter === "mlbb") return product.id === "mlbb";
+  if(activeFilter === "freefire") return product.id === "freefire";
+  return true;
+}
+function renderFilters(){
+  $("#filters").innerHTML = FILTERS.map(filter => `<button class="filter ${activeFilter===filter.id?"active":""}" type="button" data-filter="${filter.id}" aria-pressed="${activeFilter===filter.id}">${filter.label}</button>`).join("");
+}
+function productCard(product){
+  const game = product.group === "games";
+  const detailLabel = game ? "Lihat Daftar Harga" : "Lihat Detail Produk";
+  return `<article class="product-card reveal">
+    <div class="product-top">
+      ${productLogoHTML(product)}
+      <div class="product-title"><h3>${escapeHTML(product.title)}</h3><small>${escapeHTML(product.category)} · ${escapeHTML(product.tag)}</small></div>
+      <span class="product-tag">${game?"GAME":"PREMIUM"}</span>
+    </div>
+    <div class="product-body">
+      <p>${escapeHTML(product.short)}</p>
+      <div class="product-meta"><span>${product.variants.length} pilihan paket</span><span class="product-price">${escapeHTML(productPriceLabel(product))}</span></div>
+      <div class="card-actions"><button class="btn btn-primary btn-sm" type="button" data-open-product="${product.id}">${detailLabel} ↗</button><a class="btn btn-ghost btn-sm" href="${waLink(`Halo Admin ${STORE_CONFIG.storeName}! Saya tertarik dengan ${product.title}. Apakah stok atau paketnya masih tersedia? Mohon info harga dan ketentuan terbaru.`)}" target="_blank" rel="noopener">Chat Admin</a></div>
+    </div>
+  </article>`;
+}
+function renderProducts(){
+  const keyword = $("#productSearch").value.trim().toLocaleLowerCase("id-ID");
+  const filtered = PRODUCTS.filter(product => {
+    const haystack = `${product.brand} ${product.title} ${product.category} ${product.tag} ${product.short}`.toLocaleLowerCase("id-ID");
+    return productMatchesFilter(product) && haystack.includes(keyword);
+  });
+  $("#productGrid").innerHTML = filtered.length ? filtered.map(productCard).join("") : `<div class="empty-state">Produk tidak ditemukan. Coba kata kunci atau kategori lain.</div>`;
+  wireLogoFallbacks($("#productGrid"));
+  observeReveals();
+}
+function renderTicker(){
+  const firstSet = PRODUCTS.map(product => `<button class="ticker-item ticker-${product.id}" type="button" data-open-product="${product.id}" aria-label="Lihat ${escapeHTML(product.brand)}"><img src="${escapeHTML(product.logo)}" data-fallback="${escapeHTML(product.fallback)}" alt="Logo ${escapeHTML(product.brand)}" loading="lazy" decoding="async"><span>${escapeHTML(product.brand)}</span></button>`).join("");
+  $("#tickerTrack").innerHTML = firstSet + firstSet;
+  wireLogoFallbacks($("#tickerTrack"));
+}
+function setFilter(filterId){
+  activeFilter = FILTERS.some(filter => filter.id === filterId) ? filterId : "all";
+  renderFilters();
+  renderProducts();
+}
+
+function gameFieldsHTML(product){
+  if(product.id === "mlbb") return `<label><span class="field-label">User ID Mobile Legends</span><input class="field-input" id="gameUserId" inputmode="numeric" placeholder="Contoh: 123456789" autocomplete="off"></label><label><span class="field-label">Zone ID</span><input class="field-input" id="gameZoneId" inputmode="numeric" placeholder="Contoh: 1234" autocomplete="off"></label>`;
+  if(product.id === "freefire") return `<label><span class="field-label">Player ID Free Fire (opsional)</span><input class="field-input" id="gameUserId" inputmode="numeric" placeholder="Masukkan Player ID" autocomplete="off"></label><label><span class="field-label">Nickname (opsional)</span><input class="field-input" id="gameZoneId" placeholder="Nama dalam game" autocomplete="off"></label>`;
+  return "";
+}
+function orderMessage(product, variant){
+  const priceText = money(variant.price);
+  const userId = $("#gameUserId")?.value.trim() || "Belum dicantumkan";
+  const zoneId = $("#gameZoneId")?.value.trim() || "Belum dicantumkan";
+  const isGame = product.group === "games";
+  const stockLine = variant.stock === "out_of_stock"
+    ? "Saya mengetahui paket ini sedang habis. Mohon informasikan kapan stok tersedia kembali."
+    : "Apakah stok paket tersebut masih tersedia? Mohon konfirmasi ketersediaan sebelum saya melakukan pembayaran.";
+  let message = `Halo Admin ${STORE_CONFIG.storeName}!\n\nSaya ingin menanyakan ketersediaan produk berikut:\n\nProduk: ${product.title}\nPaket: ${variant.name}\nHarga tertera: ${priceText}\nStatus stok: ${statusText(variant.stock)}\n`;
+  if(isGame && product.id === "mlbb") message += `User ID: ${userId}\nZone ID: ${zoneId}\n`;
+  if(isGame && product.id === "freefire") message += `Player ID: ${userId}\nNickname: ${zoneId}\n`;
+  message += `\n${stockLine}\nJika tersedia, saya ingin melanjutkan pemesanan. Mohon konfirmasi harga dan cara pembayarannya.\n\nTerima kasih.`;
+  return message;
+}
+function generalProductMessage(product){
+  return `Halo Admin ${STORE_CONFIG.storeName}!\n\nSaya ingin menanyakan ${product.title}. Apakah masih tersedia? Mohon informasi harga, pilihan paket, stok, dan ketentuan aktivasi terbaru.\n\nTerima kasih.`;
+}
+function variantRow(product, variant, index){
+  const discounted = validDiscount(variant);
+  const stock = statusClass(variant.stock);
+  const buttonLabel = variant.stock === "out_of_stock" ? "Tanya Restock" : (variant.stock === "confirm" ? "Cek Stok" : "Pesan");
+  return `<article class="variant-row" data-variant-row data-search="${escapeHTML(variant.name.toLowerCase())}">
+    <div class="variant-main"><span class="variant-name">${escapeHTML(variant.name)}</span><span class="variant-price">${variantPriceText(variant)}</span>
+      ${discounted?`<span class="variant-note">Diskon ${Math.round((1-(variant.price/variant.originalPrice))*100)}%</span>`:""}
+      ${variant.note?`<span class="variant-note">${escapeHTML(variant.note)}</span>`:""}
+      <span class="stock-badge ${stock}">${statusText(variant.stock)}</span>
+    </div>
+    <a class="btn btn-primary btn-sm" data-order-variant="${index}" href="${waLink(orderMessage(product,variant))}" target="_blank" rel="noopener">${buttonLabel} ↗</a>
+  </article>`;
+}
+function openProduct(id){
+  const product = productById(id);
+  if(!product) return;
+  activeProduct = product;
+  previousFocus = document.activeElement;
+  const logoFrame = $("#modalLogoFrame");
+  logoFrame.className = `modal-logo logo-${product.id}`;
+  const modalLogo = $("#modalLogo");
+  modalLogo.src = product.logo;
+  modalLogo.dataset.fallback = product.fallback || "";
+  modalLogo.dataset.fallbackUsed = "";
+  modalLogo.alt = `Logo ${product.brand}`;
+  modalLogo.onerror = function(){ if(this.dataset.fallback && !this.dataset.fallbackUsed){this.dataset.fallbackUsed="1";this.src=this.dataset.fallback;} };
+  $("#modalCategory").textContent = product.category;
+  $("#modalTitle").textContent = product.title;
+  $("#modalSubtitle").textContent = product.short;
+  $("#modalInfo").textContent = product.description + " " + product.info;
+  const isGame = product.group === "games";
+  const gameFields = $("#gameIdFields");
+  gameFields.innerHTML = gameFieldsHTML(product);
+  gameFields.classList.toggle("show",isGame);
+  $("#variantHeading").textContent = isGame ? `Daftar harga ${product.brand}` : "Pilihan paket";
+  $("#variantSearchWrap").hidden = product.variants.length < 9;
+  $("#variantSearch").value = "";
+  $("#variantList").innerHTML = product.variants.map((variant,index)=>variantRow(product,variant,index)).join("");
+  $("#modalWA").href = waLink(generalProductMessage(product));
+  $("#productModal").classList.add("show");
+  $("#productModal").setAttribute("aria-hidden","false");
+  document.body.classList.add("modal-open");
+  wireLogoFallbacks($("#productModal"));
+  $("#closeModal").focus();
+}
+function closeModal(){
+  const modal = $("#productModal");
+  if(!modal.classList.contains("show")) return;
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden","true");
+  document.body.classList.remove("modal-open");
+  activeProduct = null;
+  $("#gameIdFields").innerHTML = "";
+  if(previousFocus && typeof previousFocus.focus === "function") previousFocus.focus();
+}
+function updateOrderLinks(){
+  if(!activeProduct) return;
+  $$("[data-order-variant]",$("#variantList")).forEach(link=>{
+    const variant = activeProduct.variants[Number(link.dataset.orderVariant)];
+    if(variant) link.href = waLink(orderMessage(activeProduct,variant));
+  });
+}
+function filterModalVariants(){
+  const keyword = $("#variantSearch").value.trim().toLowerCase();
+  $$("[data-variant-row]",$("#variantList")).forEach(row=>{
+    row.hidden = !row.dataset.search.includes(keyword);
+  });
+}
+
+function observeReveals(){
+  const nodes = $$(".reveal:not([data-observed])");
+  if(!("IntersectionObserver" in window)){nodes.forEach(node=>node.classList.add("visible"));return;}
+  const observer = window.__rdObserver || (window.__rdObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}});
+  },{threshold:.08}));
+  nodes.forEach(node=>{node.dataset.observed="1";observer.observe(node);});
+}
+function initNavigation(){
+  const menu = $("#navLinks");
+  $("#menuToggle").addEventListener("click",()=>{
+    const open = menu.classList.toggle("open");
+    $("#menuToggle").setAttribute("aria-expanded",String(open));
+    $("#menuToggle").setAttribute("aria-label",open?"Tutup menu":"Buka menu");
+    $("#menuToggle").textContent = open ? "×" : "☰";
+  });
+  menu.addEventListener("click",event=>{
+    const filterLink = event.target.closest("[data-filter-target]");
+    if(filterLink){setFilter(filterLink.dataset.filterTarget);}
+    if(event.target.closest("a")){menu.classList.remove("open");$("#menuToggle").setAttribute("aria-expanded","false");$("#menuToggle").textContent="☰";}
+  });
+  const sections = ["beranda","produk","informasi","kontak"].map(id=>document.getElementById(id));
+  if("IntersectionObserver" in window){
+    const navObserver = new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){$$('[data-nav]').forEach(link=>link.classList.toggle("active",link.dataset.nav===entry.target.id));}
+    }),{rootMargin:"-35% 0px -55% 0px"});
+    sections.forEach(section=>section&&navObserver.observe(section));
+  }
+}
+function initFloatingWhatsApp(){
+  const floating = $("#floatingWA");
+  let drag = null;
+  let suppressClick = false;
+  try{
+    const saved = JSON.parse(localStorage.getItem("rd190-wa-position") || "null");
+    if(saved && Number.isFinite(saved.x) && Number.isFinite(saved.y)){
+      floating.style.left = `${saved.x}px`;floating.style.top = `${saved.y}px`;floating.style.right="auto";floating.style.bottom="auto";
+    }
+  }catch(error){}
+  const clampPosition = (x,y)=>({x:Math.max(4,Math.min(window.innerWidth-floating.offsetWidth-4,x)),y:Math.max(4,Math.min(window.innerHeight-floating.offsetHeight-4,y))});
+  const initialRect=floating.getBoundingClientRect();
+  const initialPos=clampPosition(initialRect.left,initialRect.top);
+  floating.style.left=`${initialPos.x}px`;floating.style.top=`${initialPos.y}px`;floating.style.right="auto";floating.style.bottom="auto";
+  floating.addEventListener("pointerdown",event=>{
+    if(event.button !== undefined && event.button !== 0) return;
+    drag={pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,left:floating.getBoundingClientRect().left,top:floating.getBoundingClientRect().top,moved:false};
+    try{floating.setPointerCapture(event.pointerId);}catch(error){}
+  });
+  floating.addEventListener("pointermove",event=>{
+    if(!drag || drag.pointerId!==event.pointerId) return;
+    const dx=event.clientX-drag.startX,dy=event.clientY-drag.startY;
+    if(Math.abs(dx)+Math.abs(dy)>7) drag.moved=true;
+    if(!drag.moved) return;
+    const pos=clampPosition(drag.left+dx,drag.top+dy);
+    floating.style.left=`${pos.x}px`;floating.style.top=`${pos.y}px`;floating.style.right="auto";floating.style.bottom="auto";
+  });
+  const finish=event=>{
+    if(!drag || drag.pointerId!==event.pointerId) return;
+    if(drag.moved){
+      const rect=floating.getBoundingClientRect();
+      try{localStorage.setItem("rd190-wa-position",JSON.stringify({x:rect.left,y:rect.top}));}catch(error){}
+      suppressClick=true;window.setTimeout(()=>{suppressClick=false;},220);
+    }
+    drag=null;
+  };
+  floating.addEventListener("pointerup",finish);
+  floating.addEventListener("pointercancel",finish);
+  floating.addEventListener("click",event=>{if(suppressClick){event.preventDefault();event.stopPropagation();suppressClick=false;} });
+  window.addEventListener("resize",()=>{
+    const rect=floating.getBoundingClientRect();const pos=clampPosition(rect.left,rect.top);
+    floating.style.left=`${pos.x}px`;floating.style.top=`${pos.y}px`;floating.style.right="auto";floating.style.bottom="auto";
+  });
+}
+function initPageControls(){
+  $("#productSearch").addEventListener("input",renderProducts);
+  $("#filters").addEventListener("click",event=>{const button=event.target.closest("[data-filter]");if(button)setFilter(button.dataset.filter);});
+  document.addEventListener("click",event=>{const opener=event.target.closest("[data-open-product]");if(opener)openProduct(opener.dataset.openProduct);});
+  $("#closeModal").addEventListener("click",closeModal);
+  $("#modalDone").addEventListener("click",closeModal);
+  $("#productModal").addEventListener("click",event=>{if(event.target===$("#productModal"))closeModal();});
+  document.addEventListener("keydown",event=>{
+    if(event.key==="Escape"){closeModal();return;}
+    if(event.key==="Tab" && $("#productModal").classList.contains("show")){
+      const focusable=$$("button:not([disabled]),a[href],input:not([disabled])",$("#productModal")).filter(el=>el.offsetParent!==null);
+      if(!focusable.length)return;
+      const first=focusable[0],last=focusable[focusable.length-1];
+      if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
+      else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
+    }
+  });
+  $("#variantSearch").addEventListener("input",filterModalVariants);
+  $("#gameIdFields").addEventListener("input",updateOrderLinks);
+  $("#variantList").addEventListener("click",event=>{
+    const link=event.target.closest("[data-order-variant]");
+    if(link && activeProduct){const variant=activeProduct.variants[Number(link.dataset.orderVariant)];if(variant)link.href=waLink(orderMessage(activeProduct,variant));}
+  });
+  $("#modalWA").addEventListener("click",()=>{if(activeProduct)$("#modalWA").href=waLink(generalProductMessage(activeProduct));});
+  $("#backTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+  window.addEventListener("scroll",()=>{$("#backTop").classList.toggle("show",window.scrollY>500);},{passive:true});
+}
+
+initStoreContent();
+wireLogoFallbacks(document);
+renderTicker();
+renderFilters();
+renderProducts();
+initNavigation();
+initPageControls();
+initFloatingWhatsApp();
+observeReveals();
+</script>
+</body>
+</html>
